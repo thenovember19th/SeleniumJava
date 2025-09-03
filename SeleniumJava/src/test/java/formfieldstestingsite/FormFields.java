@@ -32,7 +32,11 @@ public class FormFields {
         driver.navigate().back();
         Thread.sleep(3000);
 
+        driver.navigate().back();
+
         driver.findElement(By.linkText("entering text into an input field")).click();
+        Thread.sleep(3000);
+        driver.navigate().back();
 
         driver.close();
     }
