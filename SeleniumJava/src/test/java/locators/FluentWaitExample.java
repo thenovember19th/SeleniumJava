@@ -22,5 +22,11 @@ public class FluentWaitExample {
 
         WebElement userNameField = fluent.until(ExpectedConditions.visibilityOfElementLocated(By.id("user-name")));
         userNameField.sendKeys("standard_user");
+
+        WebElement passWordField = fluent.until(ExpectedConditions.visibilityOfElementLocated(By.id("password")));
+        passWordField.sendKeys("secret_sauce");
+
+        WebElement loginButton = fluent.until(ExpectedConditions.visibilityOfElementLocated(By.id("login-button")));
+        loginButton.click();
     }
 }
