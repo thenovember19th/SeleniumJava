@@ -52,14 +52,21 @@ public class AlertExample {
 
     }
 
+    public void authenticationAlert(){
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+        driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");
+    }
+
     public static void main(String[] args) {
-//        AlertExample simple = new AlertExample();
+        AlertExample simple = new AlertExample();
 //        simple.simpleAlert();
+//        simple.otherAlert();
+//        simple.textAlert();
+          simple.authenticationAlert();
 
-//        AlertExample other = new AlertExample();
-//        other.otherAlert();
 
-        AlertExample text = new AlertExample();
-        text.textAlert();
     }
 }
