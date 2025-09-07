@@ -15,7 +15,9 @@ public class RadioButtonExample {
 
         driver.get("https://practice-automation.com/form-fields/");
 
-        WebElement desiredElem = driver.findElement(By.id("color4"));
+//        WebElement desiredElem = driver.findElement(By.id("color4"));
+        WebElement desiredElem = driver.findElement(By.xpath("//label[text()='Green']"));
+//        desiredElem.click();
         desiredElem.click();
 
     }
@@ -24,4 +26,4 @@ public class RadioButtonExample {
         RadioButtonExample radio = new RadioButtonExample();
         radio.clickOnRadioButton();
     }
-} 
+}
